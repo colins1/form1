@@ -27,8 +27,12 @@ class ColorCheck extends React.Component {
                 this.setState({backgraund: `red`, vision: 2});
                 this.componentWillMount(`red`);
             }
-        }else
+        }else if (e.target.selectionEnd > 7)
         {
+            this.setState({backgraund: `red`, vision: 2});
+            this.componentWillMount(`red`);
+        }
+        else{
             this.setState({backgraund: `white`, vision: ''});
             this.componentWillMount(`white`);
         }
